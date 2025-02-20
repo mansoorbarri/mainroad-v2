@@ -1,108 +1,109 @@
 # Contributing to Roadster
 
-**Roadster** welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you're a newcomer to open source and you haven't contributed to other projects or used [Git](https://git-scm.com/) before, you should make yourself familiar before proceeding.
+Welcome to the Roadster community! We're excited that you're interested in contributing. This guide will help you get started, whether you're fixing bugs, proposing features, or improving documentation.
 
-## Issues
+## Getting Started
 
-The [issue tracker](https://github.com/mansoorbarri/roadster/issues) is the preferred channel for bug reports and features requests, but please respect the following restrictions:
+Before contributing, please familiarize yourself with:
+- Basic [Git](https://git-scm.com/) workflows if you're new to open source
+- Our [issue tracker](https://github.com/mansoorbarri/roadster/issues) for bug reports and feature requests
+- The contribution guidelines below
 
-### General requirements
+## Creating Issues
 
-* Issue must be written in English.
-* Please **do not** combine a few problems or feature requests in one issue. Create separate issues if needed.
-* Please **do not** create an issue that contains only title. Write a clear title and useful description.
-* Please **do not** use the issue tracker for personal support requests.
-* Please **do not** post comments consisting solely of "+1" or emoji. The project maintainer reserve the right to delete such comments. Use [GitHub's reactions feature](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments) instead.
-* Search first before filing a new issue. Please check existing open or recently closed issues to make sure somebody else hasn't already reported the issue.
+We use issues to track bugs and feature requests. Here's how you can help us process them efficiently:
 
-### Reporting bugs
+### General Guidelines
 
-When creating a new bug issue make sure to include the following information:
+- Write issues in English
+- Create separate issues for different problems or features
+- Include clear titles and helpful descriptions
+- Search existing issues first to avoid duplicates
+- Use [GitHub's reactions](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments) to show support for ideas instead of "+1" comments
 
-* Your environment e.g. OS version, Hugo version, theme is up to date? Anything unusual about your environment or deployment.
-* Specify the exact steps to reproduce the bug in as many details as possible with code examples. Include links to files or demo projects, or copy/pasteable snippets, which you use in those examples.
-* Any message or error you get from Hugo, if you do.
-* A screenshot of any visual bug.
+### Bug Reports
 
-Please, take in consideration the next template to report your bug:
+When reporting a bug, please include:
 
-> **Hugo version**\
-> _Run `hugo version` and paste output here._
->
-> **Theme is up to date?**\
-> _No | Yes_
->
-> **Expected behavior**\
-> _A short and expressive description of what behavior you're expecting._
->
-> **Current behavior**\
-> _A short sentence explaining what's actually happening, possibly containing screenshots._
->
-> **Steps to reproduce / Code to reproduce**\
-> _A step by step description of how to trigger this bug. / Provide link to a demo project which reproduces this bug._
->
-> **Additional info**\
-> _Anything unusual about your environment or deployment process? Anything else do we need to know? Optional._
+```markdown
+**Hugo version**
+[Output of `hugo version`]
 
-**Note:** If you find a **Closed** issue that seems like it is the same bug that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
+**Theme status**
+Is the theme up to date? Yes/No
 
-### Proposing features
+**Expected behavior**
+[What you expected to happen]
 
-* Explain the proposed feature, what it should do, why it is useful, and alternatives considered if possible. Please note that the project maintainer may close this issue or ask you to create a Pull Request if this is not something that the project maintainer sees as a sufficiently high priority.
+**Current behavior**
+[What actually happened, including screenshots if relevant]
 
-Following these guidelines helps maintainer and the community understand your suggestion and find related suggestions.
+**Steps to reproduce**
+[Clear steps to trigger the bug, or a link to a demo project]
 
-## Pull Requests (PR)
+**Additional context**
+[Any relevant environment details or deployment information]
+```
 
-**Please ask first** before embarking on any significant pull request (e.g. implementing features or refactoring code), otherwise, you risk spending a lot of time working on something that the project maintainer might not want to merge into the project.
+**Note:** If you find a closed issue similar to your bug, please open a new issue and reference the original one.
 
-Please respect our Pull Request Acceptance Criteria. For larger changes, you will likely receive multiple rounds of comments and it may take some time to complete.
+### Feature Requests
 
-### Pull Request Acceptance Criteria
+When proposing new features:
+- Explain the feature's purpose and benefits
+- Describe how it would work
+- Consider including mockups or examples
+- Be open to discussion and feedback
 
-* Keep the change in a single PR as small as possible
-* 1 PR = 1 FIX or FEATURE (do not combine things, send separate PR if needed)
-  * PR with irrelevant changes won't be merged. If you do want to fix formatting or style, do that in a separate PR
-* Use a clear and descriptive branch name (e.g. **NOT** "patch-1" or "update")
-* Don't create a Pull Request from master branch
-* Provide a reasonable PR title and description
-  * PR must be written in English
-  * If the PR changes the UI it should include before-and-after screenshots or a link to a video
-* Keep PR up to date with upstream/master
-* Pay attention to any automated CI failures reported in the Pull Request
-* PR solves a common use case that several users will need in their real-life projects, not only your specific problems
-* If you've added or modify SVG, ensure that each SVG file:
-  * Be less than 2048 bytes
-  * Be minified to a single line with no formatting
-  * Not contain any JS or CSS section inside it
-  * Not contain any additional transformations (matrix, translate, scale) or negative viewBox position values
-  * Сompatible with [GPLv2 License](LICENSE.md)
-* Maintain clean commit history and use meaningful commit messages. Pull Requests with messy commit history (with commit messages like "update", "another update", etc) are difficult to review and won't be merged, even if the changes are good enough
-* Be prepared to answer questions and make code changes. The project maintainer expect you to be reasonably responsive to those feedback, otherwise the PR will be closed after 2-4 weeks of inactivity
+## Making Pull Requests
 
-### Pull Request Contribution Prerequisites
+We love receiving contributions! To ensure a smooth process:
 
-* You have Node & npm installed
-* You have Hugo installed at v0.128.0+
-* You are familiar with Git
+### Before You Start
 
-### Pull Request Process
+1. **Ask First**: For significant changes (new features, refactoring), please open an issue to discuss your ideas first
+2. **Prerequisites**:
+   - Hugo v0.128.0+
+   - Basic Git knowledge
+
+### Best Practices
+
+1. **Keep Changes Focused**
+   - One PR per feature/fix
+   - Make changes as small and focused as possible
+   - Submit separate PRs for formatting/style changes
+
+2. **Branch Management**
+   - Create a descriptive branch name (not "patch-1" or "update")
+   - Work from a feature branch, not master
+   - Keep your branch up to date with master
+
+3. **Quality Standards**
+   - Include clear PR titles and descriptions
+   - Add screenshots for UI changes
+   - Ensure CI checks pass
+   - Write meaningful commit messages
+   - Update documentation if needed
+   - For SVG changes:
+     - Keep files under 2048 bytes
+     - Minify to a single line
+     - Ensure GPLv2 License compatibility
+
+### Submission Process
 
 1. Fork the repository
-1. Clone down the repository to your local system
-1. Run `npm i` in the repository root
-1. Create a new *dedicated branch* with descriptive name from `master`
-1. Make your change and commit to the new branch from the previous step
-    1. Write a clear commit message
-    1. If you've added code that need documentation, update the README.md
-1. Make sure your code lints (`npm test`)
-1. Push to your fork
-1. Submit a Pull Request (PR) to the upstream
+2. Clone your fork locally
+3. Create a new feature branch
+4. Make your changes
+5. Push to your fork
+6. Submit a Pull Request
+
+We'll review your PR and might request changes. Please be responsive to feedback - PRs without activity for 2-4 weeks may be closed.
+
+## Licensing
+
+By contributing to Roadster, you agree that your contributions will be licensed under the [GPLv2 License](LICENSE.md).
 
 ---
 
-**⚠️ IMPORTANT: No guarantees can be made that your pull request will be accepted.**
-
-## License
-
-By contributing to Roadster, you agree that your contributions will be licensed under [GPLv2 License](LICENSE.md).
+Thank you for contributing to Roadster! Your efforts help make this project better for everyone. While we can't guarantee all contributions will be merged, we appreciate your time and effort.
